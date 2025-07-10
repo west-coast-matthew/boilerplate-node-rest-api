@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "es2022", // Requried for aupport of the await command
+    "esModuleInterop": true,
+    "target": "ES2020", //es6?
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist", // Output directory for compiled JS files
+    "baseUrl": "./src", // Base URL for resolving module paths and aliases
+    "rootDir": "./src", // Root directory of the source files
+    "strict": true, // Enable all strict type-checking options
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "resolveJsonModule": true, // Allow importing JSON files
+    "paths": {
+      "@/*": ["*"], // Define your aliases here. "@/" maps to the "src" directory
+      "@services/*": ["services/*"], 
+      "@constants/*": ["constants/*"], 
+      "@routes/*": ["routes/*"], 
+    }
+  },
+  "include": ["src/**/*"], // Include all files in the "src" directory
+  "exclude": ["node_modules", "dist"] // Exclude these directories
+}
